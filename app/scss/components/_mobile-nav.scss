@@ -1,9 +1,20 @@
 .mobile-nav {
     position: absolute;
+    left: 3rem;
     top: 4.625rem;
     width: 100%;
     padding: 2.5rem 0;
     background-color: $white;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+
+    &.active {
+        left: 0;
+        transform: rotate(0);
+        opacity: 1;
+    }
 
     &::before {
         content: '';
@@ -26,6 +37,8 @@
         display: none;
     }
 }
+
+
 
 .mobile-nav__link {
     display: block;
@@ -50,4 +63,48 @@
     line-height: 1.5rem;
     color: $veryDarkBlue;
     text-transform: uppercase;
+}
+
+.mobile-nav__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1.125rem;
+    background: transparent;
+    border: 0;
+
+    & span {
+        display: block;
+        width: 1.5rem;
+        border-bottom: 2px solid $white;
+        transition: all 0.3s ease-in-out;
+
+        &:first-of-type {
+            transform-origin: top left;
+        }
+
+        &:last-of-type {
+            transform-origin: bottom left;
+        }
+    }
+
+    &.active {
+        & span:first-of-type {
+            transform: rotate(45deg);
+            //transform-origin: top left;
+        }
+
+        & span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        & span:last-of-type {
+            transform: rotate(-45deg);
+            //transform-origin: bottom left;
+        }
+    }
+
+    @include breakpoint-up(large) {
+        display: none;
+    }
 }

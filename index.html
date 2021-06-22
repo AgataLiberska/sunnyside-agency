@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/app/css/style.css">
+  <script src="app/js/app.js" defer></script>
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
 </head>
@@ -20,13 +21,13 @@
           <a href="/" class="header__nav__link">Projects</a>
           <a href="/" class="header__nav__button">Contact</a>
         </nav>
-        <button class="header__toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <button class="mobile-nav__toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobileNavigation">
           <span></span>
           <span></span>
           <span></span>
         </button>
       </div>
-      <nav class="mobile-nav">
+      <nav class="mobile-nav" id="mobileNavigation">
         <a href="/" class="mobile-nav__link">About</a>
         <a href="/" class="mobile-nav__link">Services</a>
         <a href="/" class="mobile-nav__link">Projects</a>
