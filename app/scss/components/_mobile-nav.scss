@@ -1,0 +1,7 @@
+.mobile-nav {
+    position: absolute;
+
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}

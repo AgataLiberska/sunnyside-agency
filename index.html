@@ -5,38 +5,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="/app/css/style.css">
   <title>Frontend Mentor | Sunnyside agency landing page</title>
 
 </head>
 <body>
-  <header>
-    <div class="header__logo">
-      <img src="./images/logo.svg" alt="Sunnyside logo">
+  <header class="header">
+    <div class="header__container">
+      <div class="header__nav-wrapper">
+        <img src="./images/logo.svg" alt="Sunnyside logo" class="header__logo">
+        <nav class="header__nav">
+          <a href="/" class="header__nav__link">About</a>
+          <a href="/" class="header__nav__link">Services</a>
+          <a href="/" class="header__nav__link">Projects</a>
+          <a href="/" class="header__nav__button">Contact</a>
+        </nav>
+        <button class="header__toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="/">About</a>
+        <a href="/">Services</a>
+        <a href="/">Projects</a>
+        <a href="/">Contact</a>
+      </nav>
+      <h1 class="header__heading">We are creatives</h1>
+      <img src="/images/icon-arrow-down.svg" class="header__scroll-icon" alt="">
     </div>
-    <nav class="header__nav desktop-only">
-      <a href="/">About</a>
-      <a href="/">Services</a>
-      <a href="/">Projects</a>
-      <a href="/">Contact</a>
-    </nav>
-    <button class="mobile-only header__toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="header__mobile-nav mobile-only">
-      <a href="/">About</a>
-      <a href="/">Services</a>
-      <a href="/">Projects</a>
-      <a href="/">Contact</a>
-    </nav>
   </header>
   <main>
-    <section class="hero">
-      <h1>We are creatives</h1>
-      <img src="/images/icon-arrow-down.svg" alt="">
-    </section>
     <section>
       <div>
         
@@ -106,7 +106,7 @@
     </section>
   </main>
   <footer>
-    <img href="/images/logo.svg" alt="Sunnyside logo">
+    <img src="/images/logo.svg" alt="Sunnyside logo">
     <nav>
       <div>
         <a href="/">About</a>
