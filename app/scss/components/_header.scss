@@ -62,6 +62,15 @@
 
 .header__nav__link {
     display: inline-block;
+    font-family: $barlow;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: $white;
+    transition: opacity 0.2s ease-in-out;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }
 
 .header__nav__button {
@@ -69,6 +78,17 @@
     padding: 1rem 2rem;
     border-radius: 1.75rem;
     background-color: $white;
+    font-family: $fraunces;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    color: $veryDarkBlue;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover {
+        background-color: hsla(0,0,100%, 0.25);
+        color: $white;
+    }
 }
 
 .header__toggle {
