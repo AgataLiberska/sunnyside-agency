@@ -1,17 +1,17 @@
 .mobile-nav {
     position: absolute;
-    left: 3rem;
-    top: 4.625rem;
-    width: 100%;
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 6.125rem;
     padding: 2.5rem 0;
     background-color: $white;
     transform: rotate(-90deg);
-    transform-origin: top right;
+    transform-origin: right -1.5rem;
     transition: all 0.4s ease-in-out;
     opacity: 0;
 
     &.active {
-        left: 0;
+
         transform: rotate(0);
         opacity: 1;
     }
@@ -30,6 +30,8 @@
     }
 
     @include breakpoint-up(medium) {
+        left: 2.5rem;
+        right: 2.5rem;
         padding: 3.5rem 0;
     }
 
@@ -80,17 +82,17 @@
         transition: all 0.3s ease-in-out;
 
         &:first-of-type {
-            transform-origin: top left;
+            transform-origin: top right;
         }
 
         &:last-of-type {
-            transform-origin: bottom left;
+            transform-origin: bottom right;
         }
     }
 
     &.active {
         & span:first-of-type {
-            transform: rotate(45deg);
+            transform: rotate(-45deg);
             //transform-origin: top left;
         }
 
@@ -99,7 +101,7 @@
         }
 
         & span:last-of-type {
-            transform: rotate(-45deg);
+            transform: rotate(45deg);
             //transform-origin: bottom left;
         }
     }
