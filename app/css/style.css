@@ -298,6 +298,199 @@ a, a:hover, a:visited {
 }
 
 @media (min-width: 60rem) {
+  .section-one {
+    height: 37.5rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .section-one-transform {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, white), color-stop(50%, #ffd501));
+    background-image: linear-gradient(to right, white 50%, #ffd501 50%);
+  }
+}
+
+@media (min-width: 80rem) {
+  .section-one-standout {
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, #ff8071), color-stop(50%, white));
+    background-image: linear-gradient(to right, #ff8071 50%, white 50%);
+  }
+}
+
+.section-one__container {
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 60rem) {
+  .section-one__container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+.section-one__img {
+  height: 83vw;
+  max-height: 37.5rem;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.section-one__img-transform {
+  background-image: url("/images/mobile/image-transform.jpg");
+}
+
+@media (min-width: 60rem) {
+  .section-one__img-transform {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    background-image: url("/images/desktop/image-transform.jpg");
+  }
+}
+
+.section-one__img-standout {
+  background-image: url("/images/mobile/image-stand-out.jpg");
+}
+
+@media (min-width: 60rem) {
+  .section-one__img-standout {
+    background-image: url("/images/desktop/image-stand-out.jpg");
+  }
+}
+
+.section-one__content {
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+@media (min-width: 48rem) {
+  .section-one__content {
+    padding: 6rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .section-one__content {
+    padding: 9rem 4rem 8rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 60rem) {
+  .section-one__content-transform {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+}
+
+@media (min-width: 80rem) {
+  .section-one__content-transform {
+    padding: 9rem 6.5rem 9rem 10rem;
+  }
+}
+
+@media (min-width: 80rem) {
+  .section-one__content-standout {
+    padding: 9rem 10rem 9rem 6.5rem;
+  }
+}
+
+.section-one__heading {
+  max-width: 20rem;
+  margin: 0 auto 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.5rem;
+  color: #23303e;
+}
+
+@media (min-width: 48rem) {
+  .section-one__heading {
+    max-width: 25rem;
+    margin: 0 auto 2rem;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .section-one__heading {
+    margin: 0 0 2rem;
+  }
+}
+
+.section-one__text {
+  max-width: 25rem;
+  margin: 0 auto 2rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  color: #5a636c;
+}
+
+@media (min-width: 48rem) {
+  .section-one__text {
+    margin: 0 auto 2.5rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .section-one__text {
+    max-width: 30rem;
+    margin: 0 0 2.5rem;
+  }
+}
+
+.section-one__link {
+  position: relative;
+  padding: 0 0.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 1.5rem;
+  color: #23303e;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.section-one__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.125rem;
+  height: 0.625rem;
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0.25;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.section-one__link:hover::after {
+  opacity: 1;
+}
+
+.section-one__link-transform::after {
+  background-color: #fad400;
+}
+
+.section-one__link-standout::after {
+  background-color: #fe7867;
+}
+
+@media (min-width: 60rem) {
   .transform {
     height: 37.5rem;
   }
@@ -516,6 +709,31 @@ a, a:hover, a:visited {
 @media (min-width: 80rem) {
   .standout__content {
     padding: 9rem 10rem 9rem 6.5rem;
+  }
+}
+
+.standout__heading {
+  max-width: 20rem;
+  margin: 0 auto 1.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 2.5rem;
+  color: #23303e;
+}
+
+@media (min-width: 48rem) {
+  .standout__heading {
+    max-width: 25rem;
+    margin: 0 auto 2rem;
+    font-size: 2.5rem;
+    line-height: 3.125rem;
+  }
+}
+
+@media (min-width: 60rem) {
+  .standout__heading {
+    margin: 0 0 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
