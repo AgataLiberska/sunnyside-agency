@@ -545,4 +545,63 @@ a, a:hover, a:visited {
   font-size: 1rem;
   line-height: 1.75rem;
 }
+
+.testimonials {
+  padding: 4rem 1.5rem 5rem;
+  text-align: center;
+}
+
+.testimonials__heading {
+  margin-bottom: 4rem;
+  font-family: "Fraunces", serif;
+  font-size: 1rem;
+  font-weight: 900;
+  color: #a7abae;
+  line-height: 1.25rem;
+  text-transform: uppercase;
+}
+
+.testimonials__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 4rem;
+}
+
+.testimonials__item__img {
+  height: 4.5rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.testimonials__item__text {
+  margin-bottom: 2rem;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.125rem;
+  line-height: 2rem;
+  color: #5a636c;
+}
+
+.testimonials__item__name {
+  margin-bottom: 0.5rem;
+  font-family: "Fraunces", serif;
+  font-size: 1.125rem;
+  font-weight: 900;
+  color: #23303e;
+  line-height: 1.25rem;
+}
+
+.testimonials__item__role {
+  font-family: "Barlow", sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: #818498;
+}
 /*# sourceMappingURL=style.css.map */
