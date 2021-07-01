@@ -1,0 +1,112 @@
+.mobile-nav {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    top: 6.125rem;
+    padding: 2.5rem 0;
+    background-color: $white;
+    transform: rotate(-90deg);
+    transform-origin: right -1.5rem;
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+
+    &.active {
+
+        transform: rotate(0);
+        opacity: 1;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1.5rem;
+        right: 0;
+        height: 1.5rem;
+        width: 1.5rem;
+        border-top: 0.75rem solid transparent;
+        border-right: 0.75rem solid $white;
+        border-bottom: 0.75rem solid $white;
+        border-left: 0.75rem solid transparent;
+    }
+
+    @include breakpoint-up(medium) {
+        left: 2.5rem;
+        right: 2.5rem;
+        padding: 3.5rem 0;
+    }
+
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
+
+
+
+.mobile-nav__link {
+    display: block;
+    margin-bottom: 2rem;
+    font-family: $barlow;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: $veryDarkGrayishBlue;
+
+    @include breakpoint-up(medium) {
+        margin-bottom: 3rem;
+    }
+}
+
+.mobile-nav__button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: $yellow;
+    border-radius: 1.75rem;
+    font-family: $fraunces;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $veryDarkBlue;
+    text-transform: uppercase;
+}
+
+.mobile-nav__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 1.125rem;
+    background: transparent;
+    border: 0;
+
+    & span {
+        display: block;
+        width: 1.5rem;
+        border-bottom: 2px solid $white;
+        transition: all 0.3s ease-in-out;
+
+        &:first-of-type {
+            transform-origin: top right;
+        }
+
+        &:last-of-type {
+            transform-origin: bottom right;
+        }
+    }
+
+    &.active {
+        & span:first-of-type {
+            transform: rotate(-45deg);
+            //transform-origin: top left;
+        }
+
+        & span:nth-of-type(2) {
+            opacity: 0;
+        }
+
+        & span:last-of-type {
+            transform: rotate(45deg);
+            //transform-origin: bottom left;
+        }
+    }
+
+    @include breakpoint-up(large) {
+        display: none;
+    }
+}
