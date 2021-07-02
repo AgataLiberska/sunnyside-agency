@@ -1,6 +1,14 @@
 .testimonials {
     padding: 4rem 1.5rem 5rem;
     text-align: center;
+
+    @include breakpoint-up(large) {
+        padding: 7rem 4rem 7rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding: 10rem;
+    }
 }
 
 .testimonials__heading {
@@ -11,6 +19,11 @@
     color: $grayishBlue;
     line-height: 1.25rem;
     text-transform: uppercase;
+
+    @include breakpoint-up(large) {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
 }
 
 .testimonials__list {
@@ -18,6 +31,13 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include breakpoint-up(large) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .testimonials__item {
@@ -36,6 +56,11 @@
     font-size: 1.125rem;
     line-height: 2rem;
     color: $veryDarkGrayishBlue;
+
+    @include breakpoint-up(medium) {
+        max-width: 22rem;
+        margin: 0 auto 3rem;
+    }
 }
 
 .testimonials__item__name {
