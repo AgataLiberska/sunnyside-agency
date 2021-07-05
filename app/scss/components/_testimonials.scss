@@ -1,0 +1,80 @@
+.testimonials {
+    padding: 4rem 1.5rem 5rem;
+    text-align: center;
+
+    @include breakpoint-up(large) {
+        padding: 7rem 4rem 7rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+        padding: 10rem;
+    }
+}
+
+.testimonials__heading {
+    margin-bottom: 4rem;
+    font-family: $fraunces;
+    font-size: 1rem;
+    font-weight: $black;
+    color: $grayishBlue;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+
+    @include breakpoint-up(large) {
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+}
+
+.testimonials__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include breakpoint-up(large) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.testimonials__item {
+
+}
+
+.testimonials__item__img {
+    height: 4.5rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+
+.testimonials__item__text {
+    margin-bottom: 2rem;
+    font-family: $barlow;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    color: $veryDarkGrayishBlue;
+
+    @include breakpoint-up(medium) {
+        max-width: 22rem;
+        margin: 0 auto 3rem;
+    }
+}
+
+.testimonials__item__name {
+    margin-bottom: 0.5rem;
+    font-family: $fraunces;
+    font-size: 1.125rem;
+    font-weight: $black;
+    color: $veryDarkBlue;
+    line-height: 1.25rem;
+}
+
+.testimonials__item__role {
+    font-family: $barlow;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: $darkGrayishBlue;
+}
